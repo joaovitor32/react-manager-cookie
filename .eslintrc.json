@@ -1,0 +1,88 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "import", "prettier", "@typescript-eslint"],
+  "rules": {
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": ["off"],
+    "@typescript-eslint/triple-slash-reference": ["off"],
+    "arrow-body-style": 1,
+    "react/prop-types": 1,
+    "react/display-name": 0,
+
+    "react/no-children-prop": 0,
+    "react/self-closing-comp": 2,
+    "react/react-in-jsx-scope": 0,
+    "react/no-unescaped-entities": 0,
+    "import/no-useless-path-segments": 1,
+    "no-multiple-empty-lines": 2,
+    "dot-notation": "error",
+    "no-alert": "error",
+    "no-extra-semi": "error",
+    "no-nested-ternary": "error",
+    "no-unneeded-ternary": "error",
+    "no-useless-catch": "error",
+    "object-shorthand": "error",
+    "prefer-object-spread": "error",
+    "prefer-arrow-callback": "error",
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "ExportDefaultDeclaration",
+        "message": "Use named exports instead of default exports"
+      }
+    ],
+    "no-unused-vars": [
+      1,
+      {
+        "ignoreRestSiblings": false
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "groups": ["builtin", "external", "internal", "parent", "index", "sibling"],
+        "newlines-between": "always-and-inside-groups",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "warnOnUnassignedImports": true
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}

@@ -1,26 +1,39 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": "./",
+    "esModuleInterop": true, 
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "strict": true, 
+    "skipLibCheck": true,
+    "jsx": "react", 
+    "module": "ESNext",  
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "declarationDir": "types",
+    "declaration": true,
+
+    "allowSyntheticDefaultImports": true,
+
+    "allowJs": true,
+    "downlevelIteration": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noFallthroughCasesInSwitch": true,
+    "resolveJsonModule": true,
+    
+    "strictFunctionTypes": true,
   },
   "include": [
-    "src"
-  ]
+    "src/*",
+    "src/**/*",
+    "src/**/**/*",
+    "index.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
