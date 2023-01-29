@@ -32,3 +32,5 @@ out
 package-lock.json
 dist
 /coverage/*
+
+package-lock.json

@@ -17,7 +17,7 @@ export default [
         file: 'dist/cjs/index.js',
         format: 'cjs',
         sourcemap: false,
-        name: 'react-cookie',
+        name: 'react-manager-cookie',
       },
       {
         file: 'dist/esm/index.js',
