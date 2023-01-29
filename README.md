@@ -3,7 +3,7 @@
 ### How to install
 
 ```bash
-npm i react-manager-cookies
+npm i react-manager-cookie
 ```
 #### useCookies - Hook to manage cookies
 
@@ -53,7 +53,7 @@ This hooks inherits useCookies functions but has capability to monitor cookies
 /* eslint-disable no-restricted-syntax */
 import { useEffect } from 'react';
 
-import { useMonitorCookies } from 'react-manager-cookies';
+import { useMonitorCookies } from 'react-manager-cookie';
 
 function Content() {
   
