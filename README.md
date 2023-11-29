@@ -47,9 +47,6 @@ This hooks inherits useCookies functions but has capability to monitor cookies
 ##### Usage
 
 ```tsx
-/* eslint-disable no-restricted-syntax */
-import { useEffect } from 'react';
-
 import { useMonitorCookies } from 'react-manager-cookie';
 
 function Content() {
@@ -58,9 +55,10 @@ function Content() {
 
   return (
     <div>
-        <p>{JSON.stringify(cookies)}<p>
+      <p>{JSON.stringify(cookies)}</p>
     </div>
   );
+
 }
 
 export default Content;
