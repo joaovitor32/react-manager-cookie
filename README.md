@@ -50,18 +50,16 @@ This hooks inherits useCookies functions but has capability to monitor cookies
 ##### Usage
 
 ```tsx
-/* eslint-disable no-restricted-syntax */
-import { useEffect } from 'react';
-
-import { useMonitorCookies } from 'react-manager-cookie';
+import { useCookies } from 'react-manager-cookie';
 
 function Content() {
-  
-  const { cookies } = useMonitorCookies({ intervalTime: 500, cookiesToMonitor: ['teste'] });
+  const { addCookie, getCookies } = useCookies();
+
+  addCookie({ key: 'teste', value: 'teste1', options: { days: 11, maxAge: 846000, secure: true } });
 
   return (
     <div>
-        <p>{JSON.stringify(cookies)}<p>
+      <p>{JSON.stringify(getCookies())}</p>
     </div>
   );
 }
